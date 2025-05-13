@@ -1,3 +1,79 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  position: relative;
+  font-style: normal;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #FFFFFF;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.logo img {
+  width: 40;
+  height: 40;
+
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  /* no margin on first and last items */
+}
+
+nav li + li {
+  margin-left: 24px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  line-height: 60px; /* from Figma: nav height */
+  text-align: center;
+  position: relative; /* needed for ::after underline */
+}
+nav a.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #00ACDC; /* Blue underline */
+}
+nav a:hover {
+  color:#00ACDC;
 }
